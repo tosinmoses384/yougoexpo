@@ -11,7 +11,7 @@ import {
 import AllButton from '../components/AllButtons';
 import TextComponent from '../components/TextComponent';
 //import TokenModal from '../components/Modals/TokenModal';
-import {withNavigation} from 'react-navigation';
+//import {withNavigation} from 'react-navigation';
 //import {useDispatch, useSelector} from 'react-redux';
 //import {UserLogin, closeError} from '../actions/Actions';
 //import ErrorModal from '../components/Modals/ErrorModals';
@@ -135,8 +135,8 @@ const Login = props => {
   );
 };
 
-export default withNavigation(Login);
-//export default Login;
+//export default withNavigation(Login);
+export default Login;
 
 const styles = StyleSheet.create({
   container: {

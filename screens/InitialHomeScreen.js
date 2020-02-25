@@ -34,17 +34,17 @@ const HomeScreen = props => {
               <View style={{alignSelf: 'flex-end'}}>
                 <TouchableOpacity style={styles.button}>
 
-                  {/* <Text style={styles.buttonTxt}
+                  <Text style={styles.buttonTxt}
                      onPress = {() => {
                       props.navigation.navigate({routeName: 'MainWallet'});
                      }}
-                    >My Wallet </Text> */}
+                    >My Wallet </Text>
 
-                    <Text style={styles.buttonTxt}
+                    {/* <Text style={styles.buttonTxt}
                      onPress = {() => {
                       props.navigation.navigate({routeName: 'MainNotification'});
                      }}
-                    >My Notification </Text>
+                    >My Notification </Text> */}
 
                 </TouchableOpacity>
               </View>

@@ -1,11 +1,12 @@
+import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import InitialScreen from '../screens/InitialHomeScreen';
 import TheHomeScreen from '../screens/Home';
 import  TheSignUp from '../screens/SignUp';
 import TheSignIn from '../screens/Login';
-//import TheWallet from '../screens/Wallet';
-import TheNotification from '../screens/Notification';
+import TheWallet from '../screens/Wallet';
+//import TheNotification from '../screens/Notification';
 
 const BookingsNavigator = createStackNavigator({
     MainSignIn: TheSignIn,
@@ -14,12 +15,13 @@ const BookingsNavigator = createStackNavigator({
     MainHomeScreen: {
         screen: TheHomeScreen
     },
-    MainNotification: {
-        screen: TheNotification
+    MainWallet: {
+        screen: TheWallet
     }
-    // MainWallet: {
-    //     screen: TheWallet
+    // MainNotification: {
+    //     screen: TheNotification
     // }
+    
     
 });
 
