@@ -6,6 +6,8 @@ import TheHomeScreen from '../screens/Home';
 import  TheSignUp from '../screens/SignUp';
 import TheSignIn from '../screens/Login';
 import TheWallet from '../screens/Wallet';
+import TheHistory from '../screens/History';
+import TheCarsScreen from '../screens/CarsScreen';
 //import TheNotification from '../screens/Notification';
 
 const BookingsNavigator = createStackNavigator({
@@ -17,6 +19,12 @@ const BookingsNavigator = createStackNavigator({
     },
     MainWallet: {
         screen: TheWallet
+    },
+    MainHistory:  {
+        screen: TheHistory
+    },
+    MainCarsScreen: {
+        screen: TheCarsScreen
     }
     // MainNotification: {
     //     screen: TheNotification

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import Sad from '../assets/topride.svg';
+//import Sad from '../assets/topride.svg';
 import {Button} from 'native-base';
 
 const TopDeals = ({title, price}) => {

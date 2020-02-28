@@ -38,7 +38,24 @@ const HomeScreen = props => {
                      onPress = {() => {
                       props.navigation.navigate({routeName: 'MainWallet'});
                      }}
-                    >My Wallet </Text>
+                    >My Wallet 
+                  </Text>
+
+                  <Text style={styles.buttonTxt}
+                     onPress = {() => {
+                      props.navigation.navigate({routeName: 'MainHistory'});
+                     }}
+                    >History 
+                  </Text>
+
+                  <Text style={styles.buttonTxt}
+                     onPress = {() => {
+                      props.navigation.navigate({routeName: 'MainCarsScreen'});
+                     }}
+                    >CarsScreen 
+                  </Text>
+
+
 
                     {/* <Text style={styles.buttonTxt}
                      onPress = {() => {

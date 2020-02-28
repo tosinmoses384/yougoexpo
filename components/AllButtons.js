@@ -8,7 +8,7 @@ import {
 
 // const {width} = Dimensions.get('screen'); // to get screen dimension (width and height)
 
-const AllButton = ({title, handlePress, status}) => {
+const AllButton = ({title, status}) => {
   return (
     <Button
       style={styles.button}
