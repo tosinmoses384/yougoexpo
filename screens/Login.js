@@ -86,6 +86,11 @@ const Login = props => {
             title="sign in"
             status={true}
             //handlePress={() => dispatch(UserLogin(UserData))}
+
+            onPress = {() => {
+              props.navigation.navigate({routeName: 'Home'});
+            }}
+
           />
 
           <View style={styles.linkGroup}>
@@ -96,9 +101,11 @@ const Login = props => {
               <Text
                 style={styles.link2}
                 //onPress={() => navigation.navigate('SignUp')}
+
                 onPress = {() => {
-                  props.navigation.navigate({routeName: 'MainSignUp'});
+                  props.navigation.navigate({routeName: 'SignUp'});
                 }}
+
                 >
                 Sign Up
               </Text>

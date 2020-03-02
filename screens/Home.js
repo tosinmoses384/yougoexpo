@@ -104,9 +104,9 @@ const HomeScreen = props => {
                   <TouchableOpacity
                     style={styles.button}
 
-                    // onPress={() => {
-                    //   navigation.navigate('Wallet');
-                    // }}
+                    onPress={() => {
+                      props.navigation.navigate({routeName: 'Wallet'});
+                    }}
                     >
 
                     <Text style={styles.buttonTxt}>My Wallet</Text>

@@ -14,7 +14,7 @@ const NoCurrentRides = () => {
 
       <CardItem>
         <View>
-          <Text style={styles.text1}>No upcoming rides</Text>
+          <Text style={styles.text1}>No current rides</Text>
           <Text style={styles.text}>Click the get a Ride button below</Text>
         </View>
       </CardItem>

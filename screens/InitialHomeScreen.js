@@ -1,176 +1,171 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  FlatList,
-} from 'react-native';
-import UpcomingComponent from '../components/UpcomingRides';
-import {Deals} from '../src/DealsData';
-import TopDeals from '../components/TopDeals';
+// import React from 'react';
+// import {
+//   View,
+//   Text,
+//   ImageBackground,
+//   Image,
+//   StyleSheet,
+//   ScrollView,
+//   TouchableOpacity,
+//   FlatList,
+// } from 'react-native';
+// import UpcomingComponent from '../components/UpcomingRides';
+// import {Deals} from '../src/DealsData';
+// import TopDeals from '../components/TopDeals';
 
-const HomeScreen = props => {
-  return (
-    <View style={styles.container}>
+// const HomeScreen = props => {
+//   return (
+//     <View style={styles.container}>
 
-      <View style={styles.backgroundContainer}>
+//       <View style={styles.backgroundContainer}>
 
-        <ImageBackground
-          style={styles.background}
-          source={require('../assets/banner.png')}>
-          <View style={styles.topContainer}>
+//         <ImageBackground
+//           style={styles.background}
+//           source={require('../assets/banner.png')}>
+//           <View style={styles.topContainer}>
 
-            <View style={styles.topTexts}>
-              <Text style={styles.topText1}>Hello,</Text>
-              <Text style={styles.topText2}>Chiamaka Nkem-Eze</Text>
-            </View>
+//             <View style={styles.topTexts}>
+//               <Text style={styles.topText1}>Hello,</Text>
+//               <Text style={styles.topText2}>Chiamaka Nkem-Eze</Text>
+//             </View>
 
-            <View style={styles.buttonGroup}>
+//             <View style={styles.buttonGroup}>
 
-              <View style={{alignSelf: 'flex-end'}}>
-                <TouchableOpacity style={styles.button}>
+//               <View style={{alignSelf: 'flex-end'}}>
+//                 <TouchableOpacity style={styles.button}>
 
-                  <Text style={styles.buttonTxt}
-                     onPress = {() => {
-                      props.navigation.navigate({routeName: 'MainWallet'});
-                     }}
-                    >My Wallet </Text>
+//                   <Text style={styles.buttonTxt}
+//                      onPress = {() => {
+//                       props.navigation.navigate({routeName: 'MainWallet'});
+//                      }}
+//                     >My Wallet </Text>
 
-                    {/* <Text style={styles.buttonTxt}
-                     onPress = {() => {
-                      props.navigation.navigate({routeName: 'MainNotification'});
-                     }}
-                    >My Notification </Text> */}
+                  
+//                 </TouchableOpacity>
+//               </View>
 
-                </TouchableOpacity>
-              </View>
+//               <View>
+//                 <TouchableOpacity style={styles.button}>
+//                   <Text 
+//                       style={styles.buttonTxt}
+//                       onPress = {() => {
+//                         props.navigation.navigate({routeName: 'MainHomeScreen'});
+//                       }}
+//                         >Go to home</Text>
+//                 </TouchableOpacity>
+//               </View>
 
-              <View>
-                <TouchableOpacity style={styles.button}>
-                  <Text 
-                      style={styles.buttonTxt}
-                      onPress = {() => {
-                        props.navigation.navigate({routeName: 'MainHomeScreen'});
-                      }}
-                        >Go to home</Text>
-                </TouchableOpacity>
-              </View>
+//             </View>
 
-            </View>
+//           </View>
+//         </ImageBackground>
 
-          </View>
-        </ImageBackground>
+//       </View>
 
-      </View>
+//       <View style={styles.bottomContainer}>
 
-      <View style={styles.bottomContainer}>
+//         <View style={{flex: 1}}>
 
-        <View style={{flex: 1}}>
+//         <ScrollView showsVerticalScrollIndicator={false}>
 
-        <ScrollView showsVerticalScrollIndicator={false}>
+//             <UpcomingComponent />
 
-            <UpcomingComponent />
+//             <View>
 
-            <View>
+//               <View style={styles.upcomimgGroup}>
 
-              <View style={styles.upcomimgGroup}>
+//                 <Text style={styles.upcomingText}>Top Deals</Text>
 
-                <Text style={styles.upcomingText}>Top Deals</Text>
+//                 <TouchableOpacity>
 
-                <TouchableOpacity>
+//                   <Text style={styles.upcomingText}>View All</Text>
 
-                  <Text style={styles.upcomingText}>View All</Text>
+//                 </TouchableOpacity>
 
-                </TouchableOpacity>
-
-              </View>
+//               </View>
                 
-              <FlatList
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                data={Deals}
-                keyExtractor={(theitem, index) => theitem.id}
-                renderItem = {({ item }) => {
-                  return (
-                    <TopDeals title={item.deal} price={item.price} />
-                  );
-                }}
-              />
-              </View>
+//               <FlatList
+//                 horizontal
+//                 showsHorizontalScrollIndicator={false}
+//                 data={Deals}
+//                 keyExtractor={(theitem, index) => theitem.id}
+//                 renderItem = {({ item }) => {
+//                   return (
+//                     <TopDeals title={item.deal} price={item.price} />
+//                   );
+//                 }}
+//               />
+//               </View>
 
-              </ScrollView>
+//               </ScrollView>
 
-            </View>
+//             </View>
 
-      </View>
+//       </View>
 
-    </View>
-  );
-};
+//     </View>
+//   );
+// };
 
-export default HomeScreen;
+// export default HomeScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  backgroundContainer: {
-    height: '59.5%',
-    width: '100%',
-    borderBottomWidth: 2,
-    borderColor: 'rgba(0,0,0,0.1)',
-  },
-  background: {
-    height: '100%',
-    width: '100%',
-  },
-  topContainer: {
-    height: '100%',
-    paddingHorizontal: 17,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  topTexts: {marginTop: 26},
-  topText1: {
-    fontWeight: 'bold',
-    fontSize: 15,
-    color: '#fff',
-  },
-  topText2: {
-    fontWeight: 'bold',
-    fontSize: 17,
-    color: '#fff',
-  },
-  button: {
-    backgroundColor: '#fff',
-    width: 126,
-    borderRadius: 20,
-  },
-  buttonTxt: {
-    textAlign: 'center',
-    paddingVertical: 11,
-    color: '#673AB7',
-    //fontFamily: 'Roboto',
-    fontWeight: 'bold',
-  },
-  buttonGroup: {
-    alignContent: 'flex-end',
-    marginBottom: 80,
-  },
-  bottomContainer: {
-    height: '40.5%',
-    paddingHorizontal: 17,
-  },
-  upcomimgGroup: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 9,
-  },
-  upcomingText: {
-    fontWeight: 'bold',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//   },
+//   backgroundContainer: {
+//     height: '59.5%',
+//     width: '100%',
+//     borderBottomWidth: 2,
+//     borderColor: 'rgba(0,0,0,0.1)',
+//   },
+//   background: {
+//     height: '100%',
+//     width: '100%',
+//   },
+//   topContainer: {
+//     height: '100%',
+//     paddingHorizontal: 17,
+//     flexDirection: 'column',
+//     justifyContent: 'space-between',
+//   },
+//   topTexts: {marginTop: 26},
+//   topText1: {
+//     fontWeight: 'bold',
+//     fontSize: 15,
+//     color: '#fff',
+//   },
+//   topText2: {
+//     fontWeight: 'bold',
+//     fontSize: 17,
+//     color: '#fff',
+//   },
+//   button: {
+//     backgroundColor: '#fff',
+//     width: 126,
+//     borderRadius: 20,
+//   },
+//   buttonTxt: {
+//     textAlign: 'center',
+//     paddingVertical: 11,
+//     color: '#673AB7',
+//     //fontFamily: 'Roboto',
+//     fontWeight: 'bold',
+//   },
+//   buttonGroup: {
+//     alignContent: 'flex-end',
+//     marginBottom: 80,
+//   },
+//   bottomContainer: {
+//     height: '40.5%',
+//     paddingHorizontal: 17,
+//   },
+//   upcomimgGroup: {
+//     flexDirection: 'row',
+//     justifyContent: 'space-between',
+//     paddingVertical: 9,
+//   },
+//   upcomingText: {
+//     fontWeight: 'bold',
+//   },
+// });

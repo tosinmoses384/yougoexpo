@@ -96,9 +96,11 @@ const SignUp = props => {
         <AllButton
           style={{textAlign: 'center'}}
           title="sign up"
+
           // handlePress={() => {
           //   dispatch(registerUser(userData));
           // }}
+          
           status={true}
         />
 
@@ -109,10 +111,13 @@ const SignUp = props => {
           <TouchableOpacity>
             <Text
               style={styles.link2}
+
               //onPress={() => navigation.navigate('Login')}
+
               onPress = {() => {
-                props.navigation.navigate({routeName: 'Firstscreen'});
+                props.navigation.navigate({routeName: 'Login'});
               }}
+
               >
               Sign In
             </Text>
